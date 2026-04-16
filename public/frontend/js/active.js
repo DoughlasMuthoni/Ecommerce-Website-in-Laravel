@@ -60,8 +60,10 @@ window.onload = () => {
 		jQuery(window).on('scroll', function() {
 			if ($(this).scrollTop() > 200) {
 				$('.header').addClass("sticky");
+				$('#sticky-placeholder').show();
 			} else {
 				$('.header').removeClass("sticky");
+				$('#sticky-placeholder').hide();
 			}
 		});
 		
@@ -320,14 +322,4 @@ window.onload = () => {
 	// 	  " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 	// } );
 	
-	/*=====================================
-	  Preloader JS
-	======================================*/ 	
-	//After 2s preloader is fadeOut
-	$('.preloader').delay(2000).fadeOut('slow');
-	setTimeout(function() {
-	//After 2s, the no-scroll class of the body will be removed
-	$('body').removeClass('no-scroll');
-	}, 2000); //Here you can change preloader time
-	 
 })(jQuery);

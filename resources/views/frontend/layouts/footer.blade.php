@@ -59,8 +59,16 @@
 									<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
 								</ul>
 							</div>
-							<!-- End Single Widget -->
-							<!-- <div class="sharethis-inline-follow-buttons"></div> -->
+							<!-- Social Icons -->
+							<div class="social-links" style="margin-top:20px;">
+								<ul style="display:flex;gap:10px;list-style:none;padding:0;margin:0;">
+									<li><a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:all .25s;" onmouseover="this.style.background='#F7941D'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" aria-label="Twitter" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:all .25s;" onmouseover="this.style.background='#F7941D'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:all .25s;" onmouseover="this.style.background='#F7941D'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#" aria-label="YouTube" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:all .25s;" onmouseover="this.style.background='#F7941D'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fa fa-youtube-play"></i></a></li>
+								</ul>
+							</div>
+							<!-- End Social Icons -->
 						</div>
 						<!-- End Single Widget -->
 					</div>

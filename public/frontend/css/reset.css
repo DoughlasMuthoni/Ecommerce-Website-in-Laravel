@@ -284,9 +284,10 @@ big {
 }
 /* Bread Crumbs */
 .breadcrumbs {
-	background-color: #F6F7FB;
+	background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+	border-bottom: 1px solid #e5e7eb;
 	position: relative;
-	padding: 30px 0px;
+	padding: 16px 0;
 }
 .breadcrumbs .bread-inner {
 	z-index: 22;
@@ -295,28 +296,30 @@ big {
 .breadcrumbs .bread-list {
 	display: inline-block;
 }
-.breadcrumbs ul li{
+.breadcrumbs ul li {
 	display: inline-block;
 	position: relative;
 }
 .breadcrumbs ul li i {
-	margin: 0px 10px;
+	margin: 0px 8px;
 	font-size: 9px;
 	font-weight: 600;
-	color: #333;
+	color: #e5e7eb;
 }
 .breadcrumbs ul li a {
-	color: #333;
-	font-size: 14px;
+	color: #6b7280;
+	font-size: 13px;
 	font-weight: 400;
 	text-transform: capitalize;
+	transition: color 0.2s;
 }
 .breadcrumbs ul li.active a {
-	color: #333;
+	color: #F7941D;
+	font-weight: 500;
 	display: inline-block;
 }
-.breadcrumbs ul li a:hover{
-	color:#F7941D;
+.breadcrumbs ul li a:hover {
+	color: #F7941D;
 }
 /*=============================
 	Start Demos CSS 

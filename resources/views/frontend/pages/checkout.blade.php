@@ -20,7 +20,19 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-            
+
+    <!-- Checkout Step Indicator -->
+    <div class="container" style="padding-top:20px;padding-bottom:4px;">
+        <div class="d-flex align-items-center" style="gap:10px;font-size:13px;color:#6b7280;max-width:480px;">
+            <span style="background:#F7941D;color:#fff;border-radius:50%;width:26px;height:26px;min-width:26px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">1</span>
+            <span style="font-weight:600;color:#1a1a2e;">Shipping Details</span>
+            <span style="flex:1;height:1px;background:#e5e7eb;"></span>
+            <span style="background:#e5e7eb;color:#6b7280;border-radius:50%;width:26px;height:26px;min-width:26px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">2</span>
+            <span style="color:#6b7280;">Payment</span>
+        </div>
+    </div>
+    <!-- End Step Indicator -->
+
     <!-- Start Checkout -->
     <section class="shop checkout section">
         <div class="container">

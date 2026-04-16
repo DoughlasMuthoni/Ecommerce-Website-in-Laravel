@@ -1,4 +1,5 @@
 
+<div id="sticky-placeholder" style="display:none;height:60px;"></div>
 <header class="header shop">
     <!-- Topbar -->
     <div class="topbar">

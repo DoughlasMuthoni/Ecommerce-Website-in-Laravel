@@ -342,9 +342,6 @@ Version:1.0
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
-.breadcrumbs {
-	padding: 90px 0 90px;
-}
 .breadcrumbs h2 {
 	font-size: 28px;
 }
@@ -1676,4 +1673,154 @@ Version:1.0
 	font-size: 15px;
 	margin: 10px 0 10px;
 }
+}
+
+/* ============================================================
+   Modern Responsive Overrides
+   Applied after all legacy breakpoints so these always win.
+   Uses CSS custom properties defined in style.css :root block.
+   ============================================================ */
+
+/* ── Medium screens (992px – 1199px) ── */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-slider { height: 540px; }
+  .shop-newsletter .newsletter-inner input { width: 380px; }
+  .section-title { padding: 0 60px; }
+}
+
+/* ── Tablet (768px – 991px) ── */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Hero: vertically centre the caption */
+  .hero-slider { height: 400px; }
+  .hero-slider .hero-text {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  /* Product cards consistent spacing */
+  .single-product { margin-bottom: 20px; }
+
+  /* Sidebar stack cleanly */
+  .shop-sidebar { margin-bottom: 30px; }
+
+  /* Newsletter pill */
+  .shop-newsletter .newsletter-inner input,
+  .shop-newsletter .newsletter-inner .btn { border-radius: var(--radius-pill); }
+
+  /* Footer columns readable */
+  .footer .single-footer { padding: 16px 0; }
+}
+
+/* ── Mobile (≤ 767px) ── */
+@media only screen and (max-width: 767px) {
+  /* Breadcrumbs — correct compact padding */
+  .breadcrumbs { padding: 16px 0; }
+
+  /* Hero — smaller, caption centred */
+  .hero-slider { height: 280px; }
+  .hero-slider .hero-text {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    text-align: center;
+  }
+  .hero-slider .hero-text h1 { font-size: 22px; line-height: 1.25; color: #fff; }
+  .hero-slider .hero-text h1 span { font-size: 13px; }
+  .hero-slider .hero-text p { font-size: 12px; margin-bottom: 14px; color: rgba(255,255,255,0.85); }
+  .hero-slider .hero-text .btn { padding: 8px 20px; font-size: 12px; }
+
+  /* Product grid: 2 columns on mobile */
+  .product-area .col-lg-3,
+  .most-popular .col-lg-3 { flex: 0 0 50%; max-width: 50%; }
+  .single-product { margin-top: 14px; }
+
+  /* Shop page layout */
+  .shop-sidebar { margin-top: 30px; }
+  .shop .shop-top { flex-wrap: wrap; gap: 6px; }
+  .shop .shop-top .total-show-product { margin-bottom: 6px; }
+
+  /* Cart mobile label — use CSS variable */
+  .shopping-cart .table td::before { background: var(--clr-primary); }
+
+  /* Newsletter — pill inputs with CSS variable */
+  .shop-newsletter .newsletter-inner input,
+  .shop-newsletter .newsletter-inner .btn { border-radius: var(--radius-pill); }
+
+  /* Blog reply form — keep visible card style on mobile (don't strip all borders) */
+  .blog-single .reply form {
+    padding: 20px;
+    border: 1px solid var(--clr-border) !important;
+    border-radius: var(--radius-md);
+    background: var(--clr-white);
+  }
+
+  /* Checkout — order summary unstick on small viewports */
+  .shop.checkout .order-details { position: static; margin-top: 30px; }
+
+  /* Section spacing tighter on mobile */
+  .section { padding: 40px 0; }
+}
+
+/* ── Small Mobile (≤ 450px) ── */
+@media only screen and (max-width: 450px) {
+  /* FIX: topbar must stay dark — previous rule reverts it to #fff */
+  .header.shop .topbar { background: var(--clr-dark) !important; }
+
+  /* FIX: list items must stay light-coloured on the dark topbar */
+  .header.shop .list-main li {
+    color: rgba(255,255,255,0.75) !important;
+    border-bottom-color: rgba(255,255,255,0.1);
+  }
+  .header.shop .list-main li a { color: rgba(255,255,255,0.75) !important; }
+  .header.shop .list-main li a:hover {
+    color: var(--clr-primary) !important;
+    text-decoration: none !important;
+  }
+  .header.shop .list-main li i { color: var(--clr-primary) !important; }
+  .header.shop .topbar .right-content { border-top-color: rgba(255,255,255,0.1); }
+
+  /* Breadcrumbs */
+  .breadcrumbs { padding: 14px 0; }
+  .breadcrumbs h2 { font-size: 18px; }
+
+  /* Hero */
+  .hero-slider { height: 220px; }
+  .hero-slider .hero-text h1 { font-size: 18px; }
+  .hero-slider .hero-text p { display: none; }
+  .hero-slider .hero-text .btn { padding: 7px 16px; font-size: 11px; }
+
+  /* Product grid: 2 columns even on smallest screens */
+  .product-area .col-lg-3,
+  .most-popular .col-lg-3 { flex: 0 0 50%; max-width: 50%; }
+  .single-product { margin-top: 12px; }
+
+  /* Newsletter — full-width pills */
+  .shop-newsletter .newsletter-inner input,
+  .shop-newsletter .newsletter-inner .btn {
+    width: 100%;
+    border-radius: var(--radius-pill);
+  }
+
+  /* Blog reply form */
+  .blog-single .reply form {
+    padding: 16px;
+    border: 1px solid var(--clr-border) !important;
+    border-radius: var(--radius-md);
+    background: var(--clr-white);
+  }
+
+  /* Section spacing */
+  .section { padding: 32px 0; }
+
+  /* Footer compact */
+  .footer .single-footer { padding: 10px 0; }
+  .footer .single-footer h4 { font-size: 14px; margin-bottom: 10px; }
 }

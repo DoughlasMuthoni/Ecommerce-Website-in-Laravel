@@ -89,12 +89,12 @@
                                     // dd($categories);
                                 @endphp
                                 @if($categories)
-                                <button class="btn" style="background:black"data-filter="*">
+                                <button class="btn product-filter-btn how-active1" data-filter="*">
                                     All Products
                                 </button>
                                     @foreach($categories as $key=>$cat)
 
-                                    <button class="btn" style="background:none;color:black;"data-filter=".{{$cat->id}}">
+                                    <button class="btn product-filter-btn" data-filter=".{{$cat->id}}">
                                         {{$cat->title}}
                                     </button>
                                     @endforeach
@@ -522,39 +522,81 @@
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
     <style>
-        /* Banner Sliding */
+        /* ========== Hero Slider — Modern ========== */
         #Gslider .carousel-inner {
-        background: #000000;
-        color: #F7941D;
+            background: var(--clr-dark);
+            height: 600px;
         }
-
-        #Gslider .carousel-inner{
-        height: 550px;
-        }
-        #Gslider .carousel-inner img{
+        #Gslider .carousel-inner img {
             width: 100% !important;
-            opacity: .8;
+            height: 600px;
+            object-fit: cover;
+            opacity: 0.65;
         }
-
+        #Gslider .carousel-item {
+            position: relative;
+        }
         #Gslider .carousel-inner .carousel-caption {
-        bottom: 60%;
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            max-width: 620px;
+            left: 8%;
+            right: auto;
         }
-
         #Gslider .carousel-inner .carousel-caption h1 {
-        font-size: 50px;
-        font-weight: bold;
-        line-height: 100%;
-        color: #F7941D;
+            font-size: 3.25rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #ffffff;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+            margin-bottom: 1rem;
         }
-
         #Gslider .carousel-inner .carousel-caption p {
-        font-size: 18px;
-        color: black;
-        margin: 28px 0 28px 0;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.88);
+            margin: 0 0 2rem 0;
+            line-height: 1.6;
         }
-
+        /* Pill-shaped indicators */
         #Gslider .carousel-indicators {
-        bottom: 70px;
+            bottom: 28px;
+        }
+        #Gslider .carousel-indicators li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.45);
+            border: none;
+            margin: 0 4px;
+            transition: all 0.3s ease;
+        }
+        #Gslider .carousel-indicators .active {
+            width: 28px;
+            border-radius: 999px;
+            background: var(--clr-primary);
+            opacity: 1;
+        }
+        /* Product filter buttons */
+        .product-filter-btn {
+            background: transparent;
+            color: var(--clr-text);
+            border: 1px solid var(--clr-border);
+            border-radius: var(--radius-pill);
+            padding: 8px 22px;
+            font-size: 13px;
+            margin: 0 4px 8px;
+            box-shadow: none;
+            transform: none;
+        }
+        .product-filter-btn:hover,
+        .product-filter-btn.how-active1 {
+            background: var(--clr-primary);
+            color: #fff;
+            border-color: var(--clr-primary);
+            box-shadow: var(--shadow-sm);
+            transform: none;
         }
     </style>
 @endpush
